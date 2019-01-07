@@ -1,7 +1,11 @@
-<!DOCTYPE html>
-<?php
-require "server/functions.php";
+<?php 
+    require "server/functions.php";
 ?>
+
+
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -67,7 +71,18 @@ require "server/functions.php";
                     Categories
                 </a>
                 <ul class="collapse show list-unstyled" id="homeSubmenu">
-                    <?php getCats(); ?>
+                    <li>
+                        <a class="nav-link"  href="#">Laptops</a>
+                    </li>
+                    <li>
+                        <a class="nav-link"  href="#">Computers</a>
+                    </li>
+                    <li>
+                        <a class="nav-link"  href="#">Mobiles</a>
+                    </li>
+                    <li>
+                        <a class="nav-link"  href="#">Tablets</a>
+                    </li>
                 </ul>
             </li>
             <li class="active">
@@ -76,7 +91,9 @@ require "server/functions.php";
                     Brands
                 </a>
                 <ul class="collapse show list-unstyled" id="pageSubmenu">
-                    <?php getBrands(); ?>
+                    <?php
+                        get_brands(0);
+                    ?>
                 </ul>
             </li>
             <li>
@@ -97,7 +114,9 @@ require "server/functions.php";
 
         <div class="row">
             <div class="col">
-                Content
+                <?php
+                    show_data_on_content_page();
+                ?>
             </div>
         </div>
     </article>
